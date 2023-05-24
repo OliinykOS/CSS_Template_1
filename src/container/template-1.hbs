@@ -1,0 +1,93 @@
+<main>
+  <header>
+
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='currentColor'
+      class='bi bi-bootstrap-fill'
+      viewBox='0 0 16 16'
+    >
+      <path
+        d='M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z'
+      />
+      <path
+        d='M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396H5.062z'
+      />
+    </svg>
+    <ul class='nav'>
+      {{#each header}}
+        <li class='nav-item'>
+          <a class='nav-link' href={{url}}>{{text}}</a>
+        </li>
+      {{/each}}
+    </ul>
+
+  </header>
+
+  <section>
+    <div id='frame'>
+      {{#with hero}}
+        <h2>{{title}}</h2>
+        <p>{{text}}</p>
+      {{/with}}
+    </div>
+    <div id='card-deck' class='row'>
+      {{#each plans}}
+        <div class='col-4'>
+          <div class='card'>
+            <div class='card-header'>
+              {{name}}
+            </div>
+            <div class='card-body'>
+              <h1 class='card-title'>{{price}}
+                <span>/mo</span></h1>
+              <div id='list'>
+                {{#each features}}
+                  <div>{{this}}</div>
+                {{/each}}
+              </div>
+              <div>
+                <button
+                  class='btn btb-primary'
+                >{{button}}</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      {{/each}}
+
+    </div>
+  </section>
+
+  <footer>
+    <div class='row'>
+      <div class='col-1'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='currentColor'
+          class='bi bi-bootstrap-fill'
+          viewBox='0 0 16 16'
+        >
+          <path
+            d='M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z'
+          />
+          <path
+            d='M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396H5.062z'
+          />
+        </svg>
+        <div>Copyright 2023</div>
+      </div>
+      {{#each footer}}
+        <div class='col-2'>
+          <h5>{{title}}</h5>
+          <ul>
+            {{#each links}}
+              <li><a href={{url}}></a>{{text}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      {{/each}}
+    </div>
+  </footer>
+</main>
