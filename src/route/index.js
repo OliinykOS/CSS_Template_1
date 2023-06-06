@@ -520,20 +520,17 @@ router.get('/template-3', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 // ================================================================
-
-
+// Практика CSS-3 (ДЗ)
 // ================================================================
-
 // router.get Створює нам один ентпоїнт
-
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/template-4', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('template-4', {
+    layout: "template-4",
     page: {
       title: "Example Page"
     },
